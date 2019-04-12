@@ -37,7 +37,7 @@ const UPDATE = (req, res) => {
         }
 
         json.todos[index].text = text || '';
-        json.todos[index].done = done || json.todos[index].done;
+        json.todos[index].done = (done !== null) ? done : json.todos[index].done;
 
         return json;
     })

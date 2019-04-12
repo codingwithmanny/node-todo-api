@@ -17,7 +17,7 @@ const REGISTER = (req, res) => {
     // Validate Fields
     if (!Helpers.ValidateEmail(email) || !password || password.length <= 0) {
         return res.status(401).send({
-        message: Constants.ERROR_LOGIN_INPUTS
+            message: Constants.ERROR_LOGIN_INPUTS
         });
     }
 
